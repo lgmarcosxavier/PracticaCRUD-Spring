@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+    <title>Cliente</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
+</head>
+<body>
+    <div class="encabezado">
+    	<h1>Editar cliente</h1>
+    	<a href="/">&lt;&lt;&lt;Menú principal&gt;&gt;&gt;</a>	
+    </div>
+    <div class="contenedor-formulario">
+		<form th:action="@{/cliente/actualizar}" method="post" th:object="${cliente}">
+			<div class="fila">
+				<label for="nombre">Nombre: </label>
+            	<input type="text" name="nombre" id="nombre" th:field="${cliente.nombre}" th:value="${cliente.nombre}" placeholder="Ingrese el nombre" required>
+         	</div>
+           	<div class="fila">
+           		<label for="apellido">Apellido: </label>
+                <input type="text" name="apellido" id="apellido" th:field="${cliente.apellido}" th:value="${cliente.apellido}" placeholder="Ingrese el apellido" required>
+           	</div>
+           	<div class="fila">
+           		<label for="correo">Correo electrónico: </label>
+               <input type="email" name="email" id="email" th:field="${cliente.email}" th:value="${cliente.email}"  placeholder="Ingrese el correo electrónico" required>
+           	</div>
+           	<div class="fila">
+           		<label for="telefono">Teléfono: </label>
+               	<input type="number" name="telefono" id="telefono" th:field="${cliente.telefono}" th:value="${cliente.telefono}"  placeholder="Ingrese el telefono" required>
+           	</div>
+           	<div class="pie">
+           		<input type="hidden" name="id" id="id" th:field="${cliente.id}" th:value="${cliente.id}" required>
+				<button type="submit" class="boton_enviar" id="boton_enviar" style="width: 200px;">Guardar cambios</button>
+           </div>		
+		</form>    
+    </div>
+</body>
+</html>

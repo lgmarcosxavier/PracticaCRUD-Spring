@@ -1,0 +1,163 @@
+body {
+	background-color: #8080ff;
+}
+
+.encabezado {
+	background-color: #1a1aff;
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+
+.encabezado h1 {
+	text-align: center;
+	font-size: 36px;
+	font-family: monospace;
+	color: white;
+	text-shadow: -1px  0   black, 
+				  0    2px black, 
+				  3px  0   black, 
+				  0   -2px black;
+}
+
+.encabezado a {
+	color: #FFF;
+}
+
+.contenido-botones{
+	margin-top: 20px;
+	text-align: center;
+}
+
+.cuadro-boton {
+	margin: 10px 20px;
+	padding: 100px;
+	float: left;
+	background-color: #66a3ff;
+}
+
+.texto-botones {
+	text-decoration: none;
+	background-color: #cce0ff;
+	color: #FFF;
+	padding: 5px;
+	font-size: 24px;
+	text-shadow: -1px  0   black, 
+				  0    1px black, 
+				  2px  0   black, 
+				  0   -1px black;
+}
+
+
+.tabla-personalizada {
+	margin-top: 20px;
+	overflow-x: auto;
+	width: 100%;
+	background-color: #FFF;
+}
+
+.tabla-personalizada thead {
+	color: #fff;
+  	line-height: 2.2;
+  	text-transform: uppercase;
+  	background-color: #36304A;
+}
+
+.tabla-personalizada tbody td {
+	font-size: 17px;
+  	color: #808080;
+  	line-height: 1.9;
+}
+
+.tabla-personalizada tbody tr:hover{
+	background-color: #f2f2f2;
+}
+
+.tabla-personalizada tbody td:hover {
+	background-color: #d9d9d9;
+}
+
+.form-en-linea {
+	display: inline;	
+}
+
+.tabla-personalizada .celda-operaciones a{
+	background-color: #00e600;
+	color: #FFF;
+	padding: 3px; 
+	border: 1px solid #000;
+	text-decoration: none;
+}
+
+.tabla-personalizada .celda-operaciones button[type=submit]{
+	background-color: #ff3333;
+	color: #FFF;
+	padding: 5px;
+}
+
+.tabla-personalizada .celda-operaciones button[type=submit]:hover{
+	cursor: pointer;
+}    
+
+.boton-crear {
+	padding: 10px;
+	background-color: #0073e6;
+	border: 1px solid #000;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 20px;
+	float: right;
+	margin: 20px auto;
+}
+
+
+.boton-crear:hover {
+	background-color: #004d99;
+}
+
+/*
+ FORMULARIO REGISTAR
+*/
+
+.contenedor-formulario
+{
+	background-color: #FFF;
+    width: 60%;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    height: 340px; /* altura del contenedor */
+	padding: 10px;    
+}
+
+.contenedor .fila {
+    padding: 10px;
+}
+
+.fila input{
+    width: 90%;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+.pie {
+    margin: 20px 10px;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+.pie button {
+    color: white;
+    height: 30px;
+    width: 100px;
+}
+
+.boton_enviar {
+    background-color: #ff1a75;
+    float: left;
+}
+
+.boton_reset{
+    background-color: #1a1aff;
+    float: right;
+}

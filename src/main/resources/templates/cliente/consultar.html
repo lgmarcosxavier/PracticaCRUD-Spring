@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+    <title>INICIO</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
+</head>
+<body>
+    <div class="encabezado">
+    	<h1>Consultar clientes</h1>
+    	<a href="/">&lt;&lt;&lt;Menú principal&gt;&gt;&gt;</a>	
+    </div>
+    <a href="crear" class="boton-crear">Registrar nuevo cliente</a>
+    <table class="tabla-personalizada">
+    	<thead>
+    		<th>Nombre</th>
+    		<th>Apellido</th>
+    		<th>Email</th>
+    		<th>Teléfono</th>
+    		<th>Operaciones</th>
+    	</thead>
+    	<tbody>
+			<tr th:each="cliente : ${clientes}">
+				<td th:text="${cliente.nombre}" />
+				<td th:text="${cliente.apellido}" />
+				<td th:text="${cliente.email}" />
+				<td th:text="${cliente.telefono}" />
+				<td class="celda-operaciones">
+					<a th:href="@{/cliente/editar(id = ${cliente.id})}">Editar</a>
+					<form class="form-en-linea" th:action="@{/cliente/eliminar(id = ${cliente.id})}" method="post" th:object="${cliente}">
+						<input type="hidden" name="id" value="${cliente.id}" />
+						<button type="submit" onclick="confirm('¿Estas seguro de querer eliminar el registro?') ? this.parentElement.submit() : ''">
+							Eliminar
+						</button>
+					</form>
+				</td>
+			</tr>    	
+    	</tbody>
+    </table>
+</body>
+</html>
