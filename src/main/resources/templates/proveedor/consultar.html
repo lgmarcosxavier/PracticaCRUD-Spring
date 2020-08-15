@@ -2,22 +2,22 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
-    <title>Gestión productos</title>
+    <title>Gestión proveedores</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
 </head>
 <body>
     <div class="encabezado">
-    	<h1>Consultar productos</h1>
+    	<h1>Consultar proveedores</h1>
     	<a href="/">&lt;&lt;&lt;Menú principal&gt;&gt;&gt;</a>	
     </div>
-    <a href="#" class="boton-crear">Registrar nuevo producto</a>
+    <a th:href="@{/proveedor/crear}" class="boton-crear">Registrar nuevo proveedor</a>
     <table class="tabla-personalizada">
     	<thead>
     		<th>Nombre</th>
-    		<th>Descripción</th>
-    		<th>Precio compra</th>
-    		<th>Precio venta</th>
+    		<th>NIT</th>
+    		<th>Dirección</th>
+    		<th>Teléfono</th>
     		<th>Operaciones</th>
     	</thead>
     	<tbody>

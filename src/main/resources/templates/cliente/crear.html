@@ -15,19 +15,19 @@
 		<form th:action="@{/cliente/registrar}" method="post" th:object="${cliente}">
 			<div class="fila">
 				<label for="nombre">Nombre: </label>
-            	<input type="text" name="nombre" id="nombre" th:field="${cliente.nombre}" th:value="${cliente.nombre}" placeholder="Ingrese el nombre" required>
+            	<input type="text" name="nombre" id="nombre" th:value="${cliente.nombre}" placeholder="Ingrese el nombre" required>
          	</div>
            	<div class="fila">
            		<label for="apellido">Apellido: </label>
-                <input type="text" name="apellido" id="apellido" th:field="${cliente.apellido}" th:value="${cliente.apellido}" placeholder="Ingrese el apellido" required>
+                <input type="text" name="apellido" id="apellido" th:value="${cliente.apellido}" placeholder="Ingrese el apellido" required>
            	</div>
            	<div class="fila">
            		<label for="correo">Correo electrónico: </label>
-               <input type="email" name="email" id="email" th:field="${cliente.email}" th:value="${cliente.email}"  placeholder="Ingrese el correo electrónico" required>
+               <input type="email" name="email" id="email" th:value="${cliente.email}"  placeholder="Ingrese el correo electrónico" required>
            	</div>
            	<div class="fila">
            		<label for="telefono">Teléfono: </label>
-               <input type="number" name="telefono" id="telefono" th:field="${cliente.telefono}" th:value="${cliente.telefono}" placeholder="Ingrese el telefono" required>
+               <input type="number" name="telefono" id="telefono" th:value="${cliente.telefono}" placeholder="Ingrese el telefono" required>
            	</div>
            	<div class="pie">
             	<button type="submit" class="boton_enviar" id="boton_enviar">Enviar</button>
