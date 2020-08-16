@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+    <title>Proveedor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
+</head>
+<body>
+    <div class="encabezado">
+    	<h1>Editar proveedor</h1>
+    	<a href="/">&lt;&lt;&lt;Menú principal&gt;&gt;&gt;</a>	
+    </div>
+    <div class="contenedor-formulario">
+		<form th:action="@{/proveedor/actualizar}" method="post" th:object="${proveedor}">
+			<div class="fila">
+				<label for="nombre">Nombre: </label>
+            	<input type="text" name="nombre" id="nombre" th:value="${proveedor.nombre}" placeholder="Ingrese el nombre" required>
+         	</div>
+           	<div class="fila">
+           		
+           	</div>
+           	<div class="fila">
+           		
+           	</div>
+           	<div class="fila">
+           		
+           	</div>
+           	<div class="pie">
+           		<input type="hidden" name="id" id="id" th:value="${proveedor.id}" required>
+				<button type="submit" class="boton_enviar" id="boton_enviar" style="width: 200px;">Guardar cambios</button>
+           </div>		
+		</form>    
+    </div>
+</body>
+</html>
